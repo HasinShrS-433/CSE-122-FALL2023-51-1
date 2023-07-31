@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int length,width,number=0,area=0;
+    cin>>length>>width;
+    area=length*width;
+    number=(area)/2*1;
+    cout<<number<<endl;
+    return 0;
+}
