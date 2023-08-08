@@ -1,0 +1,32 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+int main(){
+  string a,b,c,d;
+  cin>>a>>b;
+ for(int i=0 ; i<a.size();i++)
+ {
+     c=tolower(a[i]);
+     d=tolower(b[i]);
+     if(c==d)
+     {
+        continue;
+     }
+     else if(c>d)
+     {
+         cout<<"1"<<endl;
+         break;
+     }
+     else
+     {
+         cout<<"-1"<<endl;
+         break;
+     }
+ }
+     if(c==d)
+     {
+         cout<<"0"<<endl;
+     }
+ return 0;
+}
+
