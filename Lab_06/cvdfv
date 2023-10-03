@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+class khela
+{
+    public:
+   int a,b,c,d;
+   void input(){
+   cin>>a>>b;
+   cout<<"your 1st number is="<<a<<"+"<<b<<"i"<<endl;
+   cin>>b>>c;
+     cout<<"your 2nd number is="<<b<<"+"<<c<<"i"<<endl;
+   }
+    void display(){
+   cout<<"your sum number is="<<a+c<<"+"<<b+d<<"i"<<endl;
+     cout<<"your sub number is="<<a-c<<"+"<<b-d<<"i"<<endl;
+   }
+
+
+};
+class opera:public khela{
+    public:
+void addComplex(){
+    int real=a+c;
+    int img=b+d;
+   }
+    void sub(){
+    int real=(a-c);
+    int img=(b-d);
+    }
+
+
+};
+int main(){
+    khela obj;
+    opera ii;
+    obj.input();
+    ii.addComplex();
+    ii.sub();
+    obj.display();
+return 0;
+}
