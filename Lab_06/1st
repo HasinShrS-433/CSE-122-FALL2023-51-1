@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+  class Vehicle {
+   public:
+    string brand = "Ford";
+    void honk() {
+      cout << "FORD"<<endl ;
+    }
+    void color(){
+     cout<<"YELLEOW"<<endl;
+    }
+};
+
+
+class Car: public Vehicle {
+  public:
+    string model = "Mustang";
+};
+class bike: public Vehicle {
+  public:
+    string model = "suzuki";
+    void honk() {
+      cout << "1000cc"<<endl ;
+    }
+    void color(){
+     cout<<"red"<<endl;
+    }
+};
+
+int main() {
+  Car myCar;
+  myCar.honk();
+  myCar.color();
+  cout << myCar.brand + " " + myCar.model<<endl;
+ bike mybike;
+ mybike.honk();
+  mybike.color();
+   cout << mybike.brand + " " + mybike.model<<endl;
+  return 0;
+}
+
