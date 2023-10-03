@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int loc,s;
+    cin>>loc;
+    if(loc%5==0)
+    {
+       s=loc/5;
+    }
+    else
+        s=(loc/5)+1;
+     cout<<s<<endl;
+    return 0;
+}
