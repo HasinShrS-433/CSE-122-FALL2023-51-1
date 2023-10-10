@@ -1,0 +1,95 @@
+Sure, here's an example of how you can create a base class `Animal` with a virtual function `makeSound()` and derive classes `Dog` and `Cat` from it with their own implementations of `makeSound()` in C++:
+
+```cpp
+#include <iostream>
+Sure, here's an example of how you can create a base class `Animal` with a virtual function `makeSound()` and derive classes `Dog` and `Cat` from it with their own implementations of `makeSound()` in C++:
+
+```cpp
+#include <iostream>
+
+// Base class Animal
+class Animal {
+public:
+    // Virtual function makeSound
+    virtual void makeSound() {
+        std::cout << "This is an animal sound." << std::endl;
+    }
+};
+
+// Derived class Dog
+class Dog : public Animal {
+public:
+    // Override makeSound for Dog
+    void makeSound() override {
+        std::cout << "Woof! Woof!" << std::endl;
+    }
+};
+
+// Derived class Cat
+class Cat : public Animal {
+public:
+    // Override makeSound for Cat
+    void makeSound() override {
+        std::cout << "Meow! Meow!" << std::endl;
+    }
+};
+
+int main() {
+    Animal* myAnimal;
+    
+    myAnimal = new Dog();
+    myAnimal->makeSound(); // Calls Dog's makeSound()
+
+    myAnimal = new Cat();
+    myAnimal->makeSound(); // Calls Cat's makeSound()
+
+    delete myAnimal;
+
+    return 0;
+}
+```
+
+In this example, we define a base class `Animal` with a virtual function `makeSound()`. Then, we derive the `Dog` and `Cat` classes from `Animal` and override the `makeSound()` function in each derived class to provide specific implementations. Finally, in the `main()` function, we demonstrate how to create objects of both `Dog` and `Cat` classes and call their respective `makeSound()` functions.
+// Base class Animal
+class Animal {
+public:
+    // Virtual function makeSound
+    virtual void makeSound() {
+        std::cout << "This is an animal sound." << std::endl;
+    }
+};
+
+// Derived class Dog
+class Dog : public Animal {
+public:
+    // Override makeSound for Dog
+    void makeSound() override {
+        std::cout << "Woof! Woof!" << std::endl;
+    }
+};
+
+// Derived class Cat
+class Cat : public Animal {
+public:
+    // Override makeSound for Cat
+    void makeSound() override {
+        std::cout << "Meow! Meow!" << std::endl;
+    }
+};
+
+int main() {
+    Animal* myAnimal;
+    
+    myAnimal = new Dog();
+    myAnimal->makeSound(); // Calls Dog's makeSound()
+
+    myAnimal = new Cat();
+    myAnimal->makeSound(); // Calls Cat's makeSound()
+
+    delete myAnimal;
+
+    return 0;
+}
+```
+
+In this example, we define a base class `Animal` with a virtual function `makeSound()`. Then, we derive the `Dog` and `Cat` classes from `Animal` and override the `makeSound()` function in each derived class to provide specific implementations. Finally, in the `main()` function, we demonstrate how to create objects of both `Dog` and `Cat` classes and call their respective `makeSound()` functions.
