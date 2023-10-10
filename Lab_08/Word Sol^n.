@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int main() {
+	string a;
+	cin>>a;
+	int unt=0,lnt=0;
+	for(int i=0;i<a.size();i++){
+	    if((a[i]>='A')&&(a[i])<='Z'){
+	        unt++;
+	    }else{
+	       lnt++;
+	    }
+	}
+	if(unt>lnt){
+	    char s;
+	    for(int i=0;i<a.size();i++){
+	        s=toupper(a[i]);
+	        cout<<s;
+	    }
+	}else{
+	    char s;
+	    for(int i=0;i<a.size();i++){
+	        s=tolower(a[i]);
+	        cout<<s;
+	    }
+	}
+	return 0;
+}
