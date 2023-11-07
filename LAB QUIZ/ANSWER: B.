@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+template <class x>
+class comp {
+public:
+    x wow( x a1,  x a2, x a3) {
+    return (a1 > a2) ? ((a1 > a3) ? a1 : a3) : ((a2 > a3) ? a2 : a3);
+    }
+};
+
+int main() {
+   cout<<"THE HIGHEST CHARACTER IS : "<<endl;
+    comp<char> b;
+    char C = b.wow('L', 'S', 'D');
+    cout<< C << endl;
+  cout<<"THE MAXIMUM INTEGER : "<<endl;
+    comp<int> a;
+    int i = a.wow(6, 3, 9);
+    cout << i << endl;
+ cout<<"THE MAXIMUM FLOAT NUMBER : "<<endl;
+    comp<float> c;
+    float f = c.wow(4.33, 3.56, 8.37);
+    cout << f << endl;
+    return 0;
+}
