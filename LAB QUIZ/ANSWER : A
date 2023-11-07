@@ -1,0 +1,76 @@
+#include <bits/stdc++.h>
+using namespace std;
+class array1
+{
+
+public:
+    int a[100];
+    char b[100];
+    float c[100];
+    int k=0;
+    int m=0;
+    int n=0;
+
+    void take(int index, int value)
+    {
+
+        for(int i=0;i<index;i++){
+            a[i]=value;
+            k++;
+        }
+    }
+
+    void take(int index,char value)
+    {
+
+        for(int i=0;i<index;i++){
+            b[i]=value;
+            m++;
+        }
+    }
+
+    void take(int index,float value)
+    {
+
+        for(int i=0;i<index;i++){
+            c[i]=value;
+            n++;
+        }
+    }
+
+    void show()
+    {
+        for(int i=0;i<k;i++){
+            cout<<a[i]<<" ";
+        }
+        cout<<endl;
+    }
+    void show1()
+    {
+        for(int i=0;i<m;i++){
+            cout<<b[i]<<" ";
+        }
+        cout<<endl;
+    }
+    void show2()
+    {
+        for(int i=0;i<n;i++){
+            cout<<c[i]<<" ";
+        }
+        cout<<endl;
+    }
+
+};
+int main()
+{
+    array1 obj;
+    obj.take(7, 2);
+    obj.take(14, 'C');
+    obj.take(10, 9.99f);
+
+    obj.show();
+    obj.show1();
+    obj.show2();
+
+
+}
