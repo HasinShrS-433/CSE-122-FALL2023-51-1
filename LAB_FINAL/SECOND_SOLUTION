@@ -1,0 +1,75 @@
+#include<bits/stdc++.h>
+using namespace std;
+class fraction
+{
+public:
+    int numerator;
+    int denumerator;
+    fraction()
+    {
+        numerator=0;
+        denumerator=0;
+    } fraction(int a, int b)
+    {
+        numerator=a;
+        denumerator=b;
+        cout<<"*****NUMERATOR OF FRACTION   : "<<a<<endl;
+        cout<<"*****DENUMERATOR OF FRACTION : "<<b<<endl;
+        str();
+        if(numerator!=0&&denumerator==0)
+        {
+            cout<<"  TURNED INFINITE "<<endl;
+        }
+        if(numerator==0&&denumerator!=0)
+        {
+            cout<<"  TURNED ZERO "<<endl;
+        }
+    }
+    fraction (const fraction& K)
+    {
+        numerator=K.numerator;
+        denumerator=K.denumerator;
+    }
+    void reduce()
+    {
+        int a=abs(numerator);
+        for(int J=2; J<=a; J++)
+        {
+            for(int J=2; J<=a; J++)
+            {
+                if(numerator%J==0&&denumerator%J==0)
+                {
+                    numerator=numerator/J;
+                    denumerator=denumerator/J;
+                }
+            }
+        }
+    }
+    fraction operator + (const fraction& x)
+    {
+        if(numerator!=0&&denumerator!=0)
+        {
+            fraction y;
+            int A= y.numerator=numerator+x.numerator;
+            int B= y.denumerator=denumerator+x.denumerator;
+            cout<<"*****ADDITIVE FORM OF FRACTION : "<<A<<"/"<<B<<endl;
+            cout<<"*****SIMPLIFIED VERSION OF FARCTION : ";
+            y.reduce();
+            return y;
+        }
+    } void str()
+    {
+        if(numerator!=0&&denumerator!=0)
+        {
+            cout<<"*****FRACTION IS : "<< numerator<<"/"<< denumerator<<endl;
+        }
+    }
+};
+int main()
+{
+    fraction Z(50,20);
+    fraction Q=Z;
+    fraction add=Z+Q;
+    add.str();
+    return 0;
+}
