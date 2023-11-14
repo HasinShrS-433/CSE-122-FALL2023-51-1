@@ -1,0 +1,49 @@
+#include<bits/stdc++.h>
+using namespace std;
+class ManU
+{
+private:
+      int player,coach;
+public:
+      void access(int a,int b)
+      {
+            player=a;
+            coach=b;
+      }
+      void take(ManU ronaldo,ManU fernandez)
+      {
+               ///cout<<abs(ronaldo.coach-fernandez.coach)<<" "<<abs(ronaldo.player-fernandez.player)<<endl;
+      if((ronaldo.player<fernandez.player)&&(ronaldo.coach<fernandez.coach))
+      {
+
+
+
+            cout<<" -> FERNANDEZ > RONALDO  "<<endl;
+      }
+     /// else if((ronaldo.player>fernandez.player)&&(ronaldo.coach>fernandez.coach))
+     /// {
+            //cout<<" -> FERNANDEZ < RONALDO  "<<endl;
+      ///}
+      else
+      {
+            cout<<" -> (FERNANDEZ == RONALDO) OR (FERNANDEZ < RONALDO)  "<<endl;
+      }
+      }
+      bool operator++(){
+            coach=coach+1;
+            player=player+1;
+      }
+};
+int main()
+{
+      ManU ronaldo,fernandez;
+      ronaldo.access(4,5);
+      fernandez.access(5,6);
+      cout<< "   -->NOT INCREMENTING RONALDO"<<endl;
+       cout<<"*****FIRST CASE RESULT*****:"<<endl;
+        ronaldo.take(ronaldo,fernandez);
+        ++ronaldo;
+       cout<<" -->AFTER INCREMENTING RONALDO"<<endl;
+       cout<<"***** SECOND CASE RESULT*****:"<<endl;
+      fernandez.take(fernandez,ronaldo);
+}
